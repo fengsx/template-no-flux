@@ -1,5 +1,5 @@
 import { setup, LogicRender } from 'no-flux';
-import {Message, Dialog, EmptyData} from 'uxcore';
+import { Message, Dialog, EmptyData } from 'uxcore';
 import assign from 'object-assign';
 import DB from './db';
 import './app.less';
@@ -23,6 +23,8 @@ setup('fn', {
 });
 
 const Loading = () => <div className="kuma-loading" />;
-// 这里给 LogicRender 增加默认行为
+
+// 修改 LogicRender 增加默认配置
+// 用来自定义Loading和Empty的样式
 LogicRender.defaultProps = assign(LogicRender.defaultProps, { Empty: EmptyData, Loading });
 

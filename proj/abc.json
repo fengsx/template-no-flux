@@ -18,8 +18,6 @@
       "react": "var React",
       "react-dom": "var ReactDOM",
       "react-router": "var ReactRouter",
-      "Promise": "var Promise",
-      "reflux": "var Reflux",
       "uxcore": "var Uxcore",
       "lodash": "var _"
     },

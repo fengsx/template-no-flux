@@ -4,7 +4,7 @@ import { setup } from 'no-flux';
 import { Menu } from 'uxcore';
 
 // `ReactRouter`文档请看  https://github.com/ReactTraining/react-router/tree/v2.8.1
-import { Router, hashHistory } from 'react-router';
+import { Router, hashHistory, Link } from 'react-router';
 
 import homeRoute from '../pages/home';
 import demoRoute from '../pages/demo';
