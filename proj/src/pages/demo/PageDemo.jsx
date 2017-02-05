@@ -7,7 +7,7 @@ import { render } from 'react-dom';
 <% if (i18n) { %>
 import i18n from 'i18n';
 <% } %>
-import './PageHome.less';
+import './PageDemo.less';
 import logic from './logic';
 import SearchWord from '../../components/search-word';
 import SearchData from '../../components/search-data';
@@ -46,9 +46,9 @@ class PageDemo extends Component {
 }
 
 <% if (SPA) { %>
-export default withRouter(PageHome);
+export default withRouter(PageDemo);
 <% } else { %>
-render(<PageHome />, document.getElementById('App'));
+render(<PageDemo />, document.getElementById('App'));
 <% } %>
 
 
