@@ -26,7 +26,7 @@ exports.filter = function(source, data) {
     if(data.SPA) {
       flag = !/\.html$/.test(source);
     }
-    if (flag !== false && !data.store) {
+    if (flag !== false && !data.logic) {
       flag = !/logic\.js$/.test(source);
     }
     return flag;
