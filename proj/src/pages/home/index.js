@@ -10,6 +10,8 @@ export default {
 };
 
 <%}else{%>
+import '../../app/noflux-conf.js';
+
 export default from './PageHome.jsx';
 
 <% } %>
