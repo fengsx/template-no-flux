@@ -14,12 +14,8 @@
   "homepage": "<%- homepage %>",
   "license": "MIT",
   "dependencies": {
-    "classnames": "~2.1.2",
     "i18n-helper": "~1.1.1",
     "uxcore": "~0.4.2",
-    "deepcopy": "^0.6.3",
-    "deepequal": "0.0.1",
-    "isarray": "^2.0.1",
     "no-flux": "^0.2.3",
     "object-assign": "^4.1.0"   
   }
