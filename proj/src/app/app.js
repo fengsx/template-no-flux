@@ -23,8 +23,9 @@ setup('fn', {
 });
 
 const Loading = () => <div className="kuma-loading" />;
+const Empty = EmptyData || (() => <div>暂无数据</div>);
 
 // 修改 LogicRender 增加默认配置
 // 用来自定义Loading和Empty的样式
-LogicRender.defaultProps = assign(LogicRender.defaultProps, { Empty: EmptyData, Loading });
+LogicRender.defaultProps = assign(LogicRender.defaultProps, { Empty, Loading });
 
