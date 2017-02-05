@@ -1,26 +1,42 @@
 {
-  "name": "demo",
+  "name": "<%- name %>",
   "options": {
     "type": "uxcore",
-    "template": "https://github.com/nowa-webpack/template-uxcore/archive/v2.zip",
-    "npm": "tnpm",
+    "template": "<%- template %>",
+    "npm": "<%- npm %>",
     "vars": {
-      "__LOCAL__": true
+      <% if (i18n) { %>"locale": "zh-cn",
+      <% } %>"__LOCAL__": true
     },
     "buildvars": {
-      "__LOCAL__": [false]
+      "__LOCAL__": [false]<% if (i18n) { %>,
+      "locale": [ "zh-cn", "en" ]<% } %>
     },
-    "pages": false,
+    "pages": <%= !SPA %>,
     "externals": {
       "natty-fetch": "var nattyFetch",
       "react": "var React",
       "react-dom": "var ReactDOM",
       "react-router": "var ReactRouter",
+      "Promise": "var Promise",
       "reflux": "var Reflux",
+      "uxcore": "var Uxcore",
       "lodash": "var _"
     },
     "mockapi": {
       "/mock/user/query.json": "mock/user/query.js"
-    }
+    }<% if (libraries) { %>,
+    "libraries": {
+      "Uxcore": {
+        "output": "uxcore.js",
+        "mappings": {
+          "Table": "uxcore-table@~1.12.13",
+          "Menu": "uxcore-menu@~1.4.1",
+          "Dialog": "uxcore-dialog@^0.5.4",
+          "EmptyData": "uxcore-empty-data@^0.1.2",
+          "Message": "uxcore-message@^0.2.6"
+        }
+      }
+    }<% } %>
   }
 }

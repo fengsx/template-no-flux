@@ -19,5 +19,5 @@ ReactRouter has upgraded to v2.8.1. A huge SPA demo is provided.
 
 - All code was written with ECMAScript2015
 
-- Reflux
-[Reflux](https://github.com/reflux/refluxjs) is 0.5.x now. setState method in page is not worked and mixin is no longer used. 
+- no-flux
+[no-flux](https://github.com/fengsx/no-flux) is 0.2.x now.

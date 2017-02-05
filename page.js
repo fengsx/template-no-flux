@@ -1,8 +1,8 @@
 // prompt for page
 exports.prompts = [{
-    name: 'store',
+    name: 'logic',
     type: 'confirm',
-    message: 'Generate store & actions?'
+    message: 'Use no-flux?'
 }];
 
 // answer for mod
@@ -27,7 +27,7 @@ exports.filter = function(source, data) {
       flag = !/\.html$/.test(source);
     }
     if (flag !== false && !data.store) {
-      flag = !/(actions|store)\.js$/.test(source);
+      flag = !/logic\.js$/.test(source);
     }
     return flag;
 };

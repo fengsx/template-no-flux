@@ -2,13 +2,13 @@ import { Component, LogicRender } from 'no-flux';
 <% if (SPA) { %>
 import { withRouter } from 'react-router';
 <% } else { %>
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 <% } %>
 <% if (i18n) { %>
 import i18n from 'i18n';
 <% } %>
 import './PageHome.less';
-import logic from './logic.js';
+import logic from './logic';
 import SearchWord from '../../components/search-word';
 import SearchData from '../../components/search-data';
 
@@ -48,7 +48,7 @@ class PageDemo extends Component {
 <% if (SPA) { %>
 export default withRouter(PageHome);
 <% } else { %>
-ReactDOM.render(<PageHome />, document.getElementById('App'));
+render(<PageHome />, document.getElementById('App'));
 <% } %>
 
 

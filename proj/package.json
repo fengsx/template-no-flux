@@ -1,23 +1,26 @@
 {
-  "name": "demo",
-  "author": "fengwei",
-  "version": "1.0.0",
-  "description": "An awesome project",
+  "name": "<%- name %>",
+  "author": "<%- author %>",
+  "version": "<%- version %>",
+  "description": "<%- description %>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "<%- repository %>"
   },
-  "homepage": "",
+  "scripts": {
+    "start": "nowa server",
+    "build": "nowa build"
+  },
+  "homepage": "<%- homepage %>",
   "license": "MIT",
   "dependencies": {
+    "classnames": "~2.1.2",
+    "i18n-helper": "~1.1.1",
+    "uxcore": "~0.4.2",
     "deepcopy": "^0.6.3",
     "deepequal": "0.0.1",
     "isarray": "^2.0.1",
     "no-flux": "^0.2.3",
-    "object-assign": "^4.1.0",
-    "uxcore-dialog": "^0.5.4",
-    "uxcore-empty-data": "^0.1.2",
-    "uxcore-menu": "~1.4.1",
-    "uxcore-message": "^0.2.6"
+    "object-assign": "^4.1.0"   
   }
 }
