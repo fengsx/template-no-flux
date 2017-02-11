@@ -16,7 +16,7 @@
   "dependencies": {
     "i18n-helper": "~1.1.1",
     "uxcore": "~0.4.2",
-    "no-flux": "^0.2.3",
+    "no-flux": "^0.2.5",
     "object-assign": "^4.1.0"   
   }
 }
