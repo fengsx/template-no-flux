@@ -1,8 +1,9 @@
-import './app.less';
+import 'no-flux-conf';
 <% if (SPA) { %>
-import './routes.jsx';
-import './noflux-conf';
-<% } %>
+import { render } from 'react-dom';
+import { Routes } from './routes.jsx';<% } %>
+import './app.less';
+
 
 // This is a Chrome only hack
 if (__LOCAL__ && window.chrome && window.chrome.webstore) {
@@ -10,4 +11,5 @@ if (__LOCAL__ && window.chrome && window.chrome.webstore) {
   setInterval(() => {
     document.body.focus();
   }, 200);
-}
+}<% if (SPA) { %>
+render(Routes, document.getElementById('App'));<% } %>

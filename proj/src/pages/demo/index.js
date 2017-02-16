@@ -7,11 +7,5 @@ export default {
       cb(null, require('./PageDemo.jsx'));
     }, 'demo');
   },
-};
-
-<%}else{%>
-import '../../app/noflux-conf.js';
-  
-export default from './PageDemo.jsx';
-
-<% } %>
+};<%}else{%>
+export default from './PageDemo.jsx';<% } %>

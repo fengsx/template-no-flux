@@ -1,6 +1,4 @@
 import { cloneElement, addons } from 'react';
-import { render } from 'react-dom';
-import { setup } from 'no-flux';
 import { Menu } from 'uxcore';
 
 // `ReactRouter`文档请看  https://github.com/ReactTraining/react-router/tree/v2.8.1
@@ -54,13 +52,8 @@ const rootRoute = {
   }],
 };
 
-// 这里使用setup来配置noflux
-setup('fn', {
-  history: hashHistory,
-});
 
-render((
-  <Router history={hashHistory} routes={rootRoute} />
-),
-  document.getElementById('App'),
-);
+export default {
+  history: hashHistory,
+  Routes: (<Router history={hashHistory} routes={rootRoute} />),
+};

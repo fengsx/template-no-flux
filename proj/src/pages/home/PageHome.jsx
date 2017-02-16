@@ -1,16 +1,12 @@
-import { Component, LogicRender } from 'no-flux';
-<% if (SPA) { %>
-import { withRouter } from 'react-router';
-<% } else { %>
-import { render } from 'react-dom';
-<% } %>
-<% if (i18n) { %>
-import i18n from 'i18n';
-<% } %>
-import './PageHome.less';
-import logic from './logic';
+import { Component, LogicRender } from 'no-flux';<% if (SPA) { %>
+import { withRouter } from 'react-router';<% } else { %>
+import { render } from 'react-dom';<% } %><% if (i18n) { %>
+import i18n from 'i18n';<% } %>
+import 'no-flux-conf';
 import SearchWord from '../../components/search-word';
 import SearchData from '../../components/search-data';
+import './PageHome.less';
+import logic from './logic';
 
 class PageHome extends Component {
 
@@ -45,12 +41,8 @@ class PageHome extends Component {
       </div>
     );
   }
-}
-
-<% if (SPA) { %>
-export default withRouter(PageHome);
-<% } else { %>
-render(<PageHome />, document.getElementById('App'));
-<% } %>
+}<% if (SPA) { %>
+export default withRouter(PageHome);<% } else { %>
+render(<PageHome />, document.getElementById('App'));<% } %>
 
 
