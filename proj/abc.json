@@ -21,6 +21,10 @@
       "uxcore": "var Uxcore",
       "lodash": "var _"
     },
+    "alias": {
+      "db": "app/db",
+      "no-flux-conf": "app/no-flux-conf"
+    },
     "mockapi": {
       "/mock/user/query.json": "mock/user/query.js"
     }<% if (libraries) { %>,
