@@ -1,3 +1,6 @@
+@import '~uxcore/assets/iconfont.css';
+@import '~uxcore/assets/orange.css';
+
 body {
   font-size: 14px;
   color: #333;
@@ -47,5 +50,12 @@ body {
 
 .kuma-container {
   background: #fff;
+  @diff : 55px;
+  min-height: calc(~"100vh - @{diff}");
+}
+<% } else {%>
+.kuma-container {
+  @diff : 55px;
+  min-height: calc(~"100vh - @{diff}");
 }
 <% } %>

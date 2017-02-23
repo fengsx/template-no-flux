@@ -1,6 +1,9 @@
 import { setup, LogicRender } from 'no-flux';
-import { Message, Dialog, EmptyData } from 'uxcore';
-import assign from 'object-assign';
+import Message from 'uxcore/lib/Message';
+import Dialog from 'uxcore/lib/Dialog';
+import EmptyData from 'uxcore/lib/EmptyData';
+
+import { assign } from 'lodash';
 import DB from './db';<% if (SPA) { %>
 import { history } from './routes.jsx';<% } %>
 

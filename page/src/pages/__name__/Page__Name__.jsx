@@ -3,7 +3,6 @@ import { withRouter } from 'react-router';<% } else { %>
 import { render } from 'react-dom';<% } %><% if (i18n) { %>
 import i18n from 'i18n';<% } %><% if (logic) { %>
 import { Component } from 'no-flux';
-import 'no-flux-conf';
 import logic from './logic';
 import './Page<%- Name %>.less';
 
@@ -40,4 +39,5 @@ class Page<%- Name %> extends Component {
   }
 }<% } %><% if(SPA){ %>
 export default withRouter(Page<%- Name %>);<% } else {%>
-render(<Page<%- Name %> />, document.getElementById('App'));<% } %>
+render(<Page<%- Name %> />, document.getElementById('App'));
+<% } %>

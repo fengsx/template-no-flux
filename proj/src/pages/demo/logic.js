@@ -1,23 +1,22 @@
-import { assign, pick } from 'lodash';
+import { assign } from 'lodash';
 
 export default {
   // defaults 返回一个对象，用于初始化页面state
   defaults(props) {
     return {
-      empty: true,
+      empty: props.empty || true,
       workNo: '',
     };
   },
-  // fn 上挂在了在app.js中定义的 dialog 和 message、DB
-  // 还有 setState/getState/getProps 三个方法
-  updateState({ setState }, data) {
-    setState(data);
+  updateState(ctx, data) {
+    ctx.setState(data);
   },
 
   // awareOf 是 LogicRender 检测到需要执行action的时候带出来的
   // awareOf 是上一次的“当前”数据，可以从 getState 中获取最新的
-  async search({ setState, getState, getProps, fn: { message, DB, history } }, awareOf) {
-    const params = pick(getState(), ['workNo']);
+  async search(ctx/* , awareOf*/) {
+    const { setState, getState, fn: { message, DB } } = ctx;
+    const params = { workNo: getState().workNo };
     let state = {};
     try {
       const users = await DB.User.query(params);
