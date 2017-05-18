@@ -47,15 +47,9 @@ body {
 .route-leave.route-leave-active {
   opacity: 0;
 }
-
-.kuma-container {
-  background: #fff;
-  @diff : 55px;
-  min-height: calc(~"100vh - @{diff}");
-}
-<% } else {%>
-.kuma-container {
-  @diff : 55px;
-  min-height: calc(~"100vh - @{diff}");
-}
 <% } %>
+.kuma-container {
+  @diff : 55px;
+  min-height: calc(~"100vh - @{diff}");
+}
+

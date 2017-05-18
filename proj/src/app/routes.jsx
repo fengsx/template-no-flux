@@ -1,6 +1,5 @@
 import { cloneElement } from 'react';
 import Menu from 'uxcore/lib/Menu';
-import Transition from 'react-addons-css-transition-group';
 
 // `ReactRouter`文档请看  https://github.com/ReactTraining/react-router/tree/v2.8.1
 import { Router, hashHistory, Link } from 'react-router';
@@ -24,11 +23,9 @@ const App = ({ children, location, routes }) => (
       </Menu.Item>
     </Menu>
     <div className="kuma-container kuma-container-1180">
-      <Transition transitionName="route" transitionEnterTimeout={500} transitionLeaveTimeout={100}>
-        {cloneElement(children || 'div', {
-          key: location.pathname,
-        })}
-      </Transition>
+      {cloneElement(children || 'div', {
+        key: location.pathname,
+      })}
     </div>
   </div>
 );

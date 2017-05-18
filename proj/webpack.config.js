@@ -3,15 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = function (config) {
-  var entryApp = config.entry.app;
-  if(Array.isArray(entryApp) ) {
-    if(entryApp.indexOf('no-flux') === -1) {
-      config.entry.app.splice(1, -1, 'no-flux');
-    }
-  }
-  else {
-    config.entry.app = ['no-flux', entryApp];
-  }
+
   config.plugins.push(new webpack.optimize.CommonsChunkPlugin({
     name: 'app',
     minChunks: Infinity,
@@ -20,7 +12,6 @@ module.exports = function (config) {
   if (process.argv[2] == 'server') {
     config.externals = [{
         'lie': 'window.Promise',
-        'natty-fetch': 'window.nattyFetch',
         'react': 'window.React',
         'react-dom': 'window.ReactDOM || window.React',
         'react-router': 'window.ReactRouter'

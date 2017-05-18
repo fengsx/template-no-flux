@@ -19,7 +19,8 @@ class Page<%- Name %> extends Component {
       </div>
     );
   }
-}<% } else { %>
+}
+<% } else { %>
 import { Component } from 'react';
 import './Page<%- Name %>.less';
 
@@ -37,7 +38,9 @@ class Page<%- Name %> extends Component {
       </div>
     );
   }
-}<% } %><% if(SPA){ %>
-export default withRouter(Page<%- Name %>);<% } else {%>
+}
+<% } %><% if(SPA){ %>
+export default withRouter(Page<%- Name %>);
+<% } else {%>
 render(<Page<%- Name %> />, document.getElementById('App'));
 <% } %>

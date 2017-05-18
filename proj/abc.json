@@ -16,12 +16,6 @@
     "injects": [
       "uxcore/assets/iconfont.css",
       "uxcore/assets/orange.css",
-      "lie/dist/lie.polyfill",
-      "natty-storage/dist/natty-storage",
-      "natty-fetch/dist/natty-fetch.pc",
-      "react/dist/react-with-addons",
-      "react-dom/dist/react-dom",
-      "react-router/umd/ReactRouter",
       "uxcore"
     ],
     "alias": {
@@ -32,18 +26,6 @@
     },
     "mockapi": {
       "/mock/user/query.json": "mock/user/query.js"
-    }<% if (libraries) { %>,
-    "libraries": {
-      "Uxcore": {
-        "output": "uxcore.js",
-        "mappings": {
-          "Table": "uxcore-table@~1.12.13",
-          "Menu": "uxcore-menu@~1.4.1",
-          "Dialog": "uxcore-dialog@^0.5.4",
-          "EmptyData": "uxcore-empty-data@^0.1.2",
-          "Message": "uxcore-message@^0.2.6"
-        }
-      }
-    }<% } %>
+    }
   }
 }
